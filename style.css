@@ -21,11 +21,12 @@
 }
 body {
   background: var(--light-bg);
+  overflow: hidden;
 }
 .themes-container {
   position: fixed;
   top: 0;
-  right: 0;
+  right: -100%;
   background: var(--bg);
   border-left: var(--border);
   height: 100vh;
@@ -33,6 +34,18 @@ body {
   z-index: 1000;
   text-align: right;
   padding: 20px;
+}
+.themes-container.active {
+  right: 0;
+}
+#theme-open {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  font-size: 40px;
+  color: var(--black);
+  cursor: pointer;
+  z-index: 10;
 }
 .themes-container #theme-close {
   font-size: 40px;
